@@ -1,13 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Star, Play } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
+import { Star, Play } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const IntroHeader = () => {
   return (
     <div className="w-full flex flex-col items-center text-center pt-10 pb-12">
       {/* Rating */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -15,7 +14,11 @@ const IntroHeader = () => {
       >
         <div className="flex items-center gap-1">
           {[1, 2, 3, 4, 5].map((star) => (
-            <Star key={star} size={14} className="fill-[#D4C5A8] text-[#D4C5A8]" />
+            <Star
+              key={star}
+              size={14}
+              className="fill-[#D4C5A8] text-[#D4C5A8]"
+            />
           ))}
         </div>
         <span className="text-xs font-medium text-brand-text/80 tracking-wide">
@@ -24,7 +27,7 @@ const IntroHeader = () => {
       </motion.div>
 
       {/* Headline */}
-      <motion.h1 
+      <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1 }}
@@ -34,29 +37,30 @@ const IntroHeader = () => {
       </motion.h1>
 
       {/* Subtext */}
-      <motion.p 
+      <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         className="text-lg text-brand-text/80 leading-relaxed max-w-2xl mb-10"
       >
-        We identify where AI saves time and money in your business, then build and implement the systems that make it happen.
+        We identify where AI saves time and money in your business, then build
+        and implement the systems that make it happen.
       </motion.p>
 
       {/* CTAs */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
         className="flex flex-col sm:flex-row items-center gap-4"
       >
-        <Link 
+        <Link
           to="/book-call"
           className="bg-brand-dark text-white text-sm font-medium px-8 py-3.5 rounded-full hover:bg-black transition-transform hover:scale-105 active:scale-95 duration-300"
         >
           Book a free call
         </Link>
-        <Link 
+        <Link
           to="/about"
           className="bg-[#EBE9E4] text-brand-dark text-sm font-medium px-6 py-3.5 rounded-full hover:bg-[#E0DED9] transition-all hover:scale-105 active:scale-95 duration-300 flex items-center gap-2 group"
         >

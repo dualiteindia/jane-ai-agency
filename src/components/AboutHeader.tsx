@@ -1,5 +1,4 @@
-import React from 'react';
-import FadeIn from './FadeIn';
+import FadeIn from "./FadeIn";
 
 const AboutHeader = () => {
   return (
@@ -12,7 +11,9 @@ const AboutHeader = () => {
           We are <span className="italic text-brand-text/40">Jane.</span>
         </h1>
         <p className="text-lg md:text-xl text-brand-text/80 max-w-2xl mx-auto leading-relaxed">
-          We believe that AI shouldn't be complicated. We started Jane to help businesses bridge the gap between complex technology and real-world results.
+          We believe that AI shouldn't be complicated. We started Jane to help
+          businesses bridge the gap between complex technology and real-world
+          results.
         </p>
       </FadeIn>
     </div>

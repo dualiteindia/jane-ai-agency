@@ -1,5 +1,5 @@
-import React from 'react';
-import FadeIn from './FadeIn';
+import FadeIn from "./FadeIn";
+import assets from "../data/assets.json";
 
 const CaseStudySection = () => {
   return (
@@ -13,26 +13,44 @@ const CaseStudySection = () => {
             </span>
             <h2 className="text-4xl md:text-5xl font-serif text-brand-dark mb-6">
               We help automate <br />
-              what matters <span className="italic text-brand-text/50">most.</span>
+              what matters{" "}
+              <span className="italic text-brand-text/50">most.</span>
             </h2>
             <p className="text-brand-text mb-8 text-sm leading-relaxed">
-              Hamilton, a growing e-commerce business, was overwhelmed by repetitive order processing and customer support tasks.
-              <br /><br />
-              We analyzed their workflows, identified high-impact opportunities, and built custom automation that integrated seamlessly with their existing tools.
-              <br /><br />
+              Hamilton, a growing e-commerce business, was overwhelmed by
+              repetitive order processing and customer support tasks.
+              <br />
+              <br />
+              We analyzed their workflows, identified high-impact opportunities,
+              and built custom automation that integrated seamlessly with their
+              existing tools.
+              <br />
+              <br />
               Within 30 days, they saw measurable results.
             </p>
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-[#EBE9E4]/50 p-6 rounded-2xl">
-                <span className="block text-3xl font-serif text-brand-dark mb-1">50+</span>
-                <span className="text-xs font-medium text-brand-text/70 uppercase tracking-wide block mb-1">Hours saved</span>
-                <span className="text-[10px] text-brand-text/50">In the first month</span>
+                <span className="block text-3xl font-serif text-brand-dark mb-1">
+                  50+
+                </span>
+                <span className="text-xs font-medium text-brand-text/70 uppercase tracking-wide block mb-1">
+                  Hours saved
+                </span>
+                <span className="text-[10px] text-brand-text/50">
+                  In the first month
+                </span>
               </div>
               <div className="bg-[#EBE9E4]/50 p-6 rounded-2xl">
-                <span className="block text-3xl font-serif text-brand-dark mb-1">40%</span>
-                <span className="text-xs font-medium text-brand-text/70 uppercase tracking-wide block mb-1">Reduction</span>
-                <span className="text-[10px] text-brand-text/50">In manual work</span>
+                <span className="block text-3xl font-serif text-brand-dark mb-1">
+                  40%
+                </span>
+                <span className="text-xs font-medium text-brand-text/70 uppercase tracking-wide block mb-1">
+                  Reduction
+                </span>
+                <span className="text-[10px] text-brand-text/50">
+                  In manual work
+                </span>
               </div>
             </div>
           </FadeIn>
@@ -40,9 +58,12 @@ const CaseStudySection = () => {
 
         {/* Right Image */}
         <div className="lg:col-span-7">
-          <FadeIn delay={0.2} className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-[2.5rem] overflow-hidden">
-            <img 
-              src="https://www.dropbox.com/scl/fi/6z4b8snhscigzjpwsmd1l/WhatsApp-Image-2025-12-22-at-12.33.46-AM.webp?rlkey=7lcc0oy0jjj14an1w3t0t00ko&st=4yf2r8y0&dl=1"
+          <FadeIn
+            delay={0.2}
+            className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-[2.5rem] overflow-hidden"
+          >
+            <img
+              src={assets.dropbox.sections.case_study_hamilton}
               alt="Hamilton Case Study"
               className="absolute inset-0 w-full h-full object-cover"
             />

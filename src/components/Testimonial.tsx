@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import assets from '../data/assets.json';
 
 const Testimonial = () => {
   return (
@@ -13,7 +14,7 @@ const Testimonial = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://www.dropbox.com/scl/fi/evq0hz0oyd116isqlkxc9/envato-labs-image-edit-15.png?rlkey=pdve00oa4dgj5c91mdbuayiqc&st=htqt0fxi&dl=1" 
+          src={assets.dropbox.sections.testimonial_bg} 
           alt="Testimonial Background" 
           className="w-full h-full object-cover"
         />

@@ -1,23 +1,26 @@
-import React from 'react';
-import FadeIn from './FadeIn';
+import FadeIn from "./FadeIn";
 
 const values = [
   {
     title: "Clarity First",
-    description: "We speak plain English, not tech jargon. If you don't understand it, we haven't done our job."
+    description:
+      "We speak plain English, not tech jargon. If you don't understand it, we haven't done our job.",
   },
   {
     title: "Results Matter",
-    description: "We don't build cool demos. We build systems that save time, reduce costs, and drive growth."
+    description:
+      "We don't build cool demos. We build systems that save time, reduce costs, and drive growth.",
   },
   {
     title: "Human Centric",
-    description: "AI should empower your team, not replace them. We design with the end-user in mind."
+    description:
+      "AI should empower your team, not replace them. We design with the end-user in mind.",
   },
   {
     title: "Long-term Partners",
-    description: "We're not just here for the setup. We stick around to ensure your systems evolve with you."
-  }
+    description:
+      "We're not just here for the setup. We stick around to ensure your systems evolve with you.",
+  },
 ];
 
 const AboutValues = () => {
@@ -29,7 +32,8 @@ const AboutValues = () => {
             Our <span className="italic text-brand-text/50">Values</span>
           </h2>
           <p className="text-brand-text max-w-md">
-            These core principles guide every decision we make and every system we build.
+            These core principles guide every decision we make and every system
+            we build.
           </p>
         </FadeIn>
 

@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { blurInVariants } from '../utils/animations';
+import React from "react";
+import { motion } from "framer-motion";
+import { blurInVariants } from "../utils/animations";
 
 interface FadeInProps {
   children: React.ReactNode;
@@ -8,7 +8,11 @@ interface FadeInProps {
   delay?: number;
 }
 
-const FadeIn: React.FC<FadeInProps> = ({ children, className = "", delay = 0 }) => {
+const FadeIn: React.FC<FadeInProps> = ({
+  children,
+  className = "",
+  delay = 0,
+}) => {
   return (
     <motion.div
       initial="hidden"
@@ -19,10 +23,10 @@ const FadeIn: React.FC<FadeInProps> = ({ children, className = "", delay = 0 }) 
         visible: {
           ...blurInVariants.visible,
           transition: {
-            ...blurInVariants.visible.transition,
-            delay
-          }
-        }
+            ...((blurInVariants.visible as any).transition as any),
+            delay,
+          },
+        },
       }}
       className={className}
     >

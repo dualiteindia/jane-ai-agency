@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import assets from '../data/assets.json';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -39,7 +40,7 @@ const Footer = () => {
           {/* Flower Image */}
           <div className="w-48 h-48 md:w-64 md:h-64 relative">
              <img 
-               src="https://www.dropbox.com/scl/fi/17usty5bo7wrz08vlmnna/envato-labs-image-edit-17.png?rlkey=xgskzbmiivant93brmpq8fezp&st=6w4b84mw&raw=1" 
+               src={assets.dropbox.visuals.decorative_flower} 
                alt="Jane Flower" 
                className="w-full h-full object-cover rounded-full mix-blend-multiply opacity-80"
              />

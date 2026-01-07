@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
-import FadeIn from './FadeIn';
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import FadeIn from "./FadeIn";
 
 interface ContentCardProps {
   id: string;
@@ -15,32 +14,32 @@ interface ContentCardProps {
   index: number;
 }
 
-const ContentCard: React.FC<ContentCardProps> = ({ 
-  id, 
-  title, 
-  category, 
-  description, 
-  image, 
+const ContentCard: React.FC<ContentCardProps> = ({
+  id,
+  title,
+  category,
+  description,
+  image,
   logoText,
   basePath,
-  index 
+  index,
 }) => {
   return (
     <FadeIn delay={index * 0.1} className="group flex flex-col gap-6">
       {/* Image Card */}
       <Link to={`${basePath}/${id}`} className="block w-full">
         <div className="relative w-full aspect-[16/10] rounded-[2rem] overflow-hidden bg-gray-100">
-          <img 
-            src={image} 
-            alt={title} 
+          <img
+            src={image}
+            alt={title}
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
-          
+
           {/* Overlay for Logo (Case Studies) */}
           {logoText && (
             <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
               <span className="text-white font-serif text-3xl md:text-4xl font-medium tracking-tight drop-shadow-md">
-                {logoText === 'Hamilton' && '*'} {logoText}
+                {logoText === "Hamilton" && "*"} {logoText}
               </span>
             </div>
           )}
@@ -62,8 +61,8 @@ const ContentCard: React.FC<ContentCardProps> = ({
             {description}
           </p>
         </div>
-        
-        <Link 
+
+        <Link
           to={`${basePath}/${id}`}
           className="w-10 h-10 rounded-full bg-brand-dark text-white flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110"
         >

@@ -1,4 +1,4 @@
-import React from 'react';
+import assets from "../data/assets.json";
 
 const VideoVisual = () => {
   return (
@@ -12,10 +12,7 @@ const VideoVisual = () => {
         className="absolute inset-0 w-full h-full object-cover"
       >
         {/* Using a high-quality abstract gradient video as placeholder */}
-        <source 
-          src="https://videos.pexels.com/video-files/2869800/2869800-hd_1920_1080_24fps.mp4" 
-          type="video/mp4" 
-        />
+        <source src={assets.pexels.videos.abstract_gradient} type="video/mp4" />
         {/* Fallback gradient if video fails */}
         <div className="absolute inset-0 bg-gradient-to-br from-orange-300 via-pink-400 to-blue-400" />
       </video>
@@ -30,15 +27,16 @@ const VideoVisual = () => {
         Looking at the reference: It's a colorful rectangle with white dots on top.
         So we place the video, then overlay a grid of white dots.
       */}
-      <div 
+      <div
         className="absolute inset-0 z-10"
         style={{
-          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.85) 30%, transparent 31%)',
-          backgroundSize: '30px 30px', // Adjust spacing of dots
-          backgroundPosition: 'center',
+          backgroundImage:
+            "radial-gradient(circle, rgba(255,255,255,0.85) 30%, transparent 31%)",
+          backgroundSize: "30px 30px", // Adjust spacing of dots
+          backgroundPosition: "center",
         }}
       />
-      
+
       {/* 
         Alternative Interpretation: 
         If the dots are supposed to be the video (holes in a white mask), 

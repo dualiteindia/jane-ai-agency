@@ -1,12 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { caseStudies } from '../data/content';
-import ContentCard from '../components/ContentCard';
-import FadeIn from '../components/FadeIn';
-import FAQSection from '../components/FAQSection';
-import ContactSection from '../components/ContactSection';
-import FooterLogos from '../components/FooterLogos';
-import { Play } from 'lucide-react';
+import { caseStudies } from "../data/content";
+import ContentCard from "../components/ContentCard";
+import FadeIn from "../components/FadeIn";
+import FAQSection from "../components/FAQSection";
+import ContactSection from "../components/ContactSection";
+import { Play } from "lucide-react";
+import assets from "../data/assets.json";
 
 const CaseStudies = () => {
   const containerClass = "w-full max-w-[1400px] mx-auto px-4 md:px-8";
@@ -39,19 +37,21 @@ const CaseStudies = () => {
             </div>
             <div className="lg:pl-12 pb-2">
               <p className="text-lg text-brand-text/80 leading-relaxed max-w-md">
-                See how we've helped companies automate their most time-consuming workflows and deliver measurable impact in weeks, not months.
+                See how we've helped companies automate their most
+                time-consuming workflows and deliver measurable impact in weeks,
+                not months.
               </p>
             </div>
           </div>
         </FadeIn>
-        
+
         {/* Abstract Flower Image (Decorative) */}
         <div className="absolute top-32 right-0 w-1/3 h-[600px] pointer-events-none opacity-50 hidden lg:block -z-10">
-           <img 
-             src="https://www.dropbox.com/scl/fi/17usty5bo7wrz08vlmnna/envato-labs-image-edit-17.png?rlkey=xgskzbmiivant93brmpq8fezp&st=6w4b84mw&raw=1" 
-             alt="Decorative Flower" 
-             className="w-full h-full object-contain mix-blend-multiply blur-3xl"
-           />
+          <img
+            src={assets.dropbox.visuals.decorative_flower}
+            alt="Decorative Flower"
+            className="w-full h-full object-contain mix-blend-multiply blur-3xl"
+          />
         </div>
       </section>
 
@@ -59,7 +59,7 @@ const CaseStudies = () => {
       <section className={`${containerClass} mb-32`}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
           {caseStudies.map((study, index) => (
-            <ContentCard 
+            <ContentCard
               key={study.id}
               {...study}
               basePath="/case-studies"

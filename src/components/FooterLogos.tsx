@@ -1,5 +1,4 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const FooterLogos = () => {
   const brands = [
@@ -11,7 +10,7 @@ const FooterLogos = () => {
   ];
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
@@ -24,7 +23,10 @@ const FooterLogos = () => {
 
       <div className="flex flex-wrap justify-center md:justify-end items-center gap-8 md:gap-12 w-full grayscale opacity-50 hover:opacity-80 transition-opacity duration-500">
         {brands.map((brand, idx) => (
-          <span key={idx} className={`text-xl md:text-2xl text-brand-dark ${brand.font}`}>
+          <span
+            key={idx}
+            className={`text-xl md:text-2xl text-brand-dark ${brand.font}`}
+          >
             {brand.name}
           </span>
         ))}

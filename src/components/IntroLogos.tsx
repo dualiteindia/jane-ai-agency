@@ -1,5 +1,4 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const IntroLogos = () => {
   const brands = [
@@ -11,7 +10,7 @@ const IntroLogos = () => {
   ];
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.6 }}
@@ -23,7 +22,10 @@ const IntroLogos = () => {
 
       <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 w-full opacity-40 grayscale hover:opacity-60 transition-opacity duration-500">
         {brands.map((brand, idx) => (
-          <span key={idx} className={`text-2xl md:text-3xl text-brand-dark ${brand.className}`}>
+          <span
+            key={idx}
+            className={`text-2xl md:text-3xl text-brand-dark ${brand.className}`}
+          >
             {brand.name}
           </span>
         ))}
